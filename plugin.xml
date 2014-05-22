@@ -21,8 +21,8 @@
         <clobbers target="DirectionsPlugin" />
     </js-module>
 
-    <dependency id="com.apache.cordova.geolocation" url="https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git"/>
-    <dependency id="com.apache.cordova.device" url="https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git" />
+    <dependency id="org.apache.cordova.geolocation" url="https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git"/>
+    <dependency id="org.apache.cordova.device" url="https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git" />
 
     <platform name="android">
     	<source-file src="src/android/DirectionsPlugin.java" target-dir="src/com/mikeyalder/phonegap" />
