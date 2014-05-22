@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="com.mikeyalder.phonegap.DirectionsPlugin" version="1.0.0">
+
+	<name>Direction Intent Plugin</name>
+    
+    <author>Mikey Alder</author>
+    <keywords>Maps, Google Maps, Intent, Direction</keywords>
+
+    <description>
+        This plugin allows the user to fire an intent to use either the native maps app or Google Maps (on Android) to show directions to a location using the maps app.
+    </description>
+
+    <license>Apache 2.0 License</license>
+    
+    
+    <engines>
+      <engine name="cordova" version=">=2.8.1" />
+    </engines>
+
+    <js-module src="www/DirectionsPlugin.js" name="DirectionsPlugin">
+        <clobbers target="DirectionsPlugin" />
+    </js-module>
+
+    <dependency id="com.apache.cordova.geolocation" url="https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git"/>
+    <dependency id="com.apache.cordova.device" url="https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git" />
+
+    <platform name="android">
+    	<source-file src="src/android/DirectionsPlugin.java" target-dir="src/com/mikeyalder/phonegap" />
+    </platform>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+        <uses-permission android:name="android.permission.ACCESS_GPS" />
+        <uses-feature android:name="android.hardware.location" android:required="true" />
+        <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
+        <uses-feature android:name="android.hardware.sensor.compass" android:required="true" />
+    </config-file>
+
+
+    <!-- visible after installation -->
+        <info>
+            Successfully added the DirectionsPlugin to the project. To get started read the documentation.
+        </info>
+
+</plugin>
